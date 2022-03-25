@@ -43,7 +43,7 @@ const Footer = () => {
                             <FooterLink to="/">100% Purchase Protection</FooterLink>
                             <FooterLink to="/">Amazon App Download</FooterLink>
                             <FooterLink to="/">Amazon Assistant Download</FooterLink>
-                            <FooterLink to="/">Help</FooterLink>
+                            <FooterLink to="/Help">Help</FooterLink>
                     </FooterLinkItems>
                 </FooterLinksWrapper>
             </FooterLinksContainer>

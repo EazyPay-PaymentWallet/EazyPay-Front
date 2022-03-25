@@ -34,7 +34,7 @@ const Services = () => {
                     <MiniCard to = '/DTHCableTV' image={image2} text='DTH / Cable TV'/>
                     <MiniCard to = '/GooglePlay' image={image3} text='Google Play'/>
                     <MiniCard to = '/FASTagRecharge' image={image4} text='FASTag Recharge'/>
-                    <MiniCard to = '/Education' image={image5} text='Education'/>
+                    <MiniCard to = '/EducationFees' image={image5} text='Education'/>
                  </CardContainer>
                  <CardContainer>
                     <MiniCard to = '/Electricity' image={image6} text='Electricity'/>

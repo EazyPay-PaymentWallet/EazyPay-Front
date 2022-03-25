@@ -20,11 +20,10 @@ const Feature3 = () => {
         <SubTitle>Win scratch cards via Pay or Shopping actions.</SubTitle>
         <CardContainer>
             <MiniCard to='/FoodOrders' image={image1} text='Food Orders'/>
-            <MiniCard to='/StoresNearYou' image={image2} text='Stores Near You'/>
             <MiniCard to='/Shopping' image={image3} text='Shopping'/>
+            <MiniCard to='/Travel' image={image4} text='Travel'/>
         </CardContainer>
         <CardContainer>
-            <MiniCard to='/Travel' image={image4} text='Travel'/>
             <MiniCard to='/Entertainment' image={image5} text='Entertainment'/>
             <MiniCard to='/Health&Fitness' image={image6} text='Health & Fitness'/>
         </CardContainer>

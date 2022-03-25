@@ -31,7 +31,7 @@ const Feature = () => {
         <CardContainer>
           <MiniCard to='/PayNumber' image={imag1} text='Pay Number'/>
           <MiniCard to='/BankTransfer' image={imag2} text='Bank Transfer'/>
-          <MiniCard to='/PayUPIid' image={imag1} text='Pay UPI id'/>
+          <MiniCard to='/PayUPI' image={imag1} text='Pay UPI id'/>
         </CardContainer>
       </Right>
     </Container>
