@@ -48,11 +48,11 @@ export const Form = styled.form`
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
   margin-left: -180px;
-  margin-top: 55px;
+  margin-top: 5px;
 `;
 
 export const FormH1 = styled.h1`
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   color: #fff;
   font-size: 23px;
   font-weight: bold;
