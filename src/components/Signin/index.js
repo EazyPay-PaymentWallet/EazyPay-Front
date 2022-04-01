@@ -14,8 +14,12 @@ const Signin = () => {
         e.preventDefault()
         console.log('SignIn Form')
         if(email == '' || password == ''){
+            setFormError("Please fill every field")
             return
         }
+        //if(password != confirmPassword){
+        //    setFormError("Password doesn't match")
+        //}
 
         Axios.post("http://localhost:3001/SignIn",{
             email: email,
@@ -28,7 +32,7 @@ const Signin = () => {
             else{
                 setFormError(response.data.error)
             }
-        })
+        }).catch(() => setFormError('Unknown Error'))
     } 
   return (
     <>
@@ -40,13 +44,14 @@ const Signin = () => {
             <Right>
                 <Form action="#">
                     <FormH1>Login to your account</FormH1>
+                    <p style= {{color: 'yellow'}}>{formError ? formError : ''}</p>
                     <FormLabel htmlFor='for'>Email</FormLabel>
                     <FormInput type='email' onChange={(e) => { setEmail(e.target.value)}} required />
                     <FormLabel htmlFor='for'>Password</FormLabel>
                     <FormInput type='password' onChange={(e) => { setPassword(e.target.value)}} required />
                     <Text1>Forgot your Password?</Text1>
                     <FormButton type='submit' onClick={login} >Log In</FormButton>
-                    <Text2>Don't have account? Sign Up</Text2>
+                    <Text2 onClick={()=>navigate("/SignUp")}>Don't have account? Sign Up</Text2>
                 </Form>
             </Right>
         </Container>

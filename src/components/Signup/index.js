@@ -1,8 +1,14 @@
-import React, { useState } from 'react'
-import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormInput, FormButton, Image } from './SignupElements'
-import img1 from '../../Images/21.png'
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormInput, FormButton, Image } from './SignupElements';
+import img1 from '../../Images/21.png';
 import { useNavigate } from 'react-router-dom';
-import Axios from 'axios'
+import Axios from 'axios';
+import styled from 'styled-components';
+
+const pStyle = styled.p`
+  color: white;
+`;
 
 const Signup = () => {
 
@@ -11,30 +17,51 @@ const Signup = () => {
     const [email, setEmail] = useState("")
     const [phoneNumber, setPhoneNumber] = useState("")
     const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
     const [formError, setFormError] = useState("")
 
     const register = e => {
         e.preventDefault()
-        console.log('SignUp Form')
-        if(fullName == '' || email == '' || phoneNumber == '' || password == ''){
+        // console.log('SignUp Form')
+        if(fullName == '' || email == '' || phoneNumber == '' || password == '' || confirmPassword == ''){
+            setFormError("Please fill every field")
             return
         }
 
-        Axios.post("http://localhost:3001/SignUp",{
-            fullName: fullName,
-            email: email,
-            phoneNumber: phoneNumber,
-            password: password
-        }).then((response) => {
-            console.log(response.data);
-            if(!response.data.error) {
-                navigate('/')
-            }
-            else{
+        if(password != confirmPassword){
+            setFormError("Password doesn't match")
+        }
+        else if(phoneNumber.length != 10){
+            setFormError("Please enter a valid phone number")
+        }
+        else{
+            Axios.post("http://localhost:3001/SignUp",{
+                fullName: fullName,
+                email: email,
+                phoneNumber: phoneNumber,
+                password: password
+            }).then((response) => {
+                console.log('response');
+                if(!response.data.error) {
+                    // emailjs.sendForm(
+                    //     'service_hojtnwb',
+                    //     'template_s41ykp6',
+                    //     e.target,
+                    //     '_H_WEyJwMSkeOFL8F'
+                    // ).then(res=>{
+                    //     console.log(res)
+                    // }).catch(err=>console.log(err));
+                    navigate('/')
+                }
+
+                if (response.data.error) {
+                    console.log('error', response.data.error)
+                }
+
                 setFormError(response.data.error)
-            }
-        })
-    } 
+            })
+        }
+    }
   return (
     <>
         <Container>
@@ -45,7 +72,7 @@ const Signup = () => {
             <Right>
                 <Form action="#">
                     <FormH1>Create your account</FormH1>
-                    <p>{formError ? formError : ''}</p>
+                    <p style= {{color: 'yellow'}}>{formError ? formError : ''}</p>
                     <FormLabel htmlFor='for'>Full Name</FormLabel>
                     <FormInput type='text' onChange={(e) => { setFullName(e.target.value)}} required />
                     <FormLabel htmlFor='for'>Email</FormLabel>
@@ -55,7 +82,7 @@ const Signup = () => {
                     <FormLabel htmlFor='for'>Password</FormLabel>
                     <FormInput type='password' onChange={(e) => { setPassword(e.target.value)}} required />
                     <FormLabel htmlFor='for'>Confirm Password</FormLabel>
-                    <FormInput type='password' required />
+                    <FormInput type='password' onChange={(e) => { setConfirmPassword(e.target.value)}} required />
                     <FormButton type='submit' onClick={register}>Register</FormButton>
                 </Form>
             </Right>
