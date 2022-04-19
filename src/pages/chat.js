@@ -1,34 +1,30 @@
 import React from 'react'
 import styled from "styled-components";
 import AnimatedShapes from "../components/AnimatedShapes";
-
-import Addmoney from '../components/AddMoney';
+import ChatSection from "../components/ChatSection";
 
 const Container = styled.div`
-  height: 100vh;
-  overflow: hidden;
   position: relative;
 `;
 
-const RechargeShape = styled.div`
+const ChatShape = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: polygon(0 0, 15% 0, 30% 100%, 0% 100%);
+  clip-path: polygon(0 0, 20% 0, 20% 100%, 0% 100%);
   background-color: crimson;
   z-index: -1;
 `;
 
-const AddMoney = () => {
+const Chat = () => {
   return (
     <Container>
-      <RechargeShape />
-      <Addmoney />
-      <AnimatedShapes />
+      <ChatShape />
+      <ChatSection />
     </Container>
   )
 }
 
-export default AddMoney;
+export default Chat;

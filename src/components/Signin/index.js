@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormInput, FormButton, Image, Text1, Text2, TextLink } from './SigninElements'
+import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormInput, FormButton, Image , Text1, Text2 } from './SigninElements';
 import img1 from '../../Images/21.png';
 import { useNavigate } from 'react-router-dom';
 import Axios from 'axios';
+import styled from 'styled-components';
 
-const Signin = () => {
+const pStyle = styled.p`
+  color: white;
+`;
+
+const SignIn = () => {
+
     const navigate = useNavigate()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -17,23 +23,23 @@ const Signin = () => {
             setFormError("Please fill every field")
             return
         }
-        //if(password != confirmPassword){
-        //    setFormError("Password doesn't match")
-        //}
+        else{
+            Axios.post("http://localhost:3001/Login",{
+                email: email,
+                password: password
+            }).then((response) => {
+                console.log('response');
+                if(!response.data.error) {
+                    navigate('/')
+                }
 
-        Axios.post("http://localhost:3001/SignIn",{
-            email: email,
-            password: password
-        }).then((response) => {
-            console.log(response.data);
-            if(!response.data.error) {
-                navigate('/')
-            }
-            else{
+                if (response.data.error) {
+                    console.log('error', response.data.error)
+                }
                 setFormError(response.data.error)
-            }
-        }).catch(() => setFormError('Unknown Error'))
-    } 
+            })
+        }
+    }
   return (
     <>
         <Container>
@@ -59,4 +65,4 @@ const Signin = () => {
   )
 }
 
-export default Signin
+export default SignIn

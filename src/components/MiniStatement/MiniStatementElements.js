@@ -30,7 +30,7 @@ export const Left = styled.div`
 
 export const Right = styled.div`
   width: 40%;
-  margin-left: -320px;
+  margin-left: -270px;
   margin-top: 40px;
 `;
 
@@ -51,10 +51,10 @@ export const TextWrapper = styled.div`
 `;
 
 export const ImageIcon = styled.img`
-  height: 60px;
-  width: 80px;
-  margin-right: 20px;
-  margin-top: 15px;
+  height: 40px;
+  width: 40px;
+  margin-right: 30px;
+  margin-top: 25px;
 `;
 
 export const TextDiv = styled.div`
@@ -74,13 +74,27 @@ export const SubTitle = styled.span`
 `;
 
 export const Desc = styled.span`
-
+  color: blue;
 `;
 
-export const Amount = styled.span`
+export const CAmount = styled.span`
+  margin-top: 5px;
+  color: green;
+  font-size: 20px;
+`;
+
+export const DAmount = styled.span`
   margin-top: 5px;
   color: red;
   font-size: 20px;
 `;
 
+export const TitleText = styled.h2`
+  text-align: center;
+  margin-bottom: 20px;
+`;
 
+export const FormSelect = styled.div`
+  display: flex;
+  flex-direction: row;
+`;

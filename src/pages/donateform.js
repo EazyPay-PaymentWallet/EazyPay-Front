@@ -1,34 +1,33 @@
 import React from 'react'
 import styled from "styled-components";
 import AnimatedShapes from "../components/AnimatedShapes";
-
-import Addmoney from '../components/AddMoney';
+import Donateform from '../components/DonateForm';
 
 const Container = styled.div`
-  height: 100vh;
+  height: 118vh;
   overflow: hidden;
   position: relative;
 `;
 
-const RechargeShape = styled.div`
+const DonateFormShape = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: polygon(0 0, 15% 0, 30% 100%, 0% 100%);
+  clip-path: polygon(0 0, 20% 0, 35% 100%, 0% 100%);
   background-color: crimson;
   z-index: -1;
 `;
 
-const AddMoney = () => {
+const DonateForm = () => {
   return (
     <Container>
-      <RechargeShape />
-      <Addmoney />
+      <DonateFormShape />
+      <Donateform />
       <AnimatedShapes />
     </Container>
   )
 }
 
-export default AddMoney;
+export default DonateForm;

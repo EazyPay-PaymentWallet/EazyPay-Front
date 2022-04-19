@@ -17,7 +17,7 @@ const Feature = () => {
           <SummaryAdd>
             <SummaryAddLinks to='/AddMoney'>Add Money</SummaryAddLinks>
             <SummaryAddLinks to='/TransactionHistory'>Your Transactions</SummaryAddLinks>
-            <SummaryAddLinks to='/'>Auto Related</SummaryAddLinks>
+            <SummaryAddLinks to='/MiniStatement'>Monthly Statement</SummaryAddLinks>
             <SummaryAddLinks to='/'>Account Settings</SummaryAddLinks>
           </SummaryAdd>
         </Summary>

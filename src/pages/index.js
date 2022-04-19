@@ -9,6 +9,7 @@ import Services from "../components/ServiceSection";
 import Price from "../components/PriceSection";
 import Feature2 from "../components/Feature2";
 import Feature3 from "../components/Feature3";
+import Additional from "../components/AdditionalSection";
 import Footer from "../components/Footer";
 
 const Container = styled.div`
@@ -56,7 +57,7 @@ const PriceShape = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: polygon(70% 0, 100% 0%, 100% 100%, 38% 100%);
+  clip-path: polygon(0 0, 25% 0, 50% 100%, 0% 100%);
   background-color: pink;
   z-index: -1;
 `;
@@ -79,6 +80,17 @@ const Feature3Shape = styled.div`
   top: 0;
   left: 0;
   clip-path: polygon(70% 0, 100% 0%, 100% 100%, 70% 100%);
+  background-color: #f88497;
+  z-index: -1;
+`;
+
+const AdditionalShape = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 25% 0%, 25% 100%, 0 100%);
   background-color: #f88497;
   z-index: -1;
 `;
@@ -110,6 +122,11 @@ function App() {
       <Container>
         <Feature3 />
         <Feature3Shape />
+        <AnimatedShapes />
+      </Container>
+      <Container>
+        <Additional />
+        <AdditionalShape />
         <AnimatedShapes />
       </Container>
       <Container>

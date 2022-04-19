@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
 import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormInput, FormButton, Image } from './SignupElements';
 import img1 from '../../Images/21.png';
 import { useNavigate } from 'react-router-dom';
@@ -43,14 +42,6 @@ const Signup = () => {
             }).then((response) => {
                 console.log('response');
                 if(!response.data.error) {
-                    // emailjs.sendForm(
-                    //     'service_hojtnwb',
-                    //     'template_s41ykp6',
-                    //     e.target,
-                    //     '_H_WEyJwMSkeOFL8F'
-                    // ).then(res=>{
-                    //     console.log(res)
-                    // }).catch(err=>console.log(err));
                     navigate('/')
                 }
 

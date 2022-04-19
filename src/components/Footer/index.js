@@ -27,22 +27,22 @@ const Footer = () => {
                 <FooterLinksWrapper>
                     <FooterLinkItems>
                         <FooterLinkTitle>Make Money with Us</FooterLinkTitle>
-                            <FooterLink to="/">Sell on Amazon</FooterLink>
-                            <FooterLink to="/">Sell under Amazon Accelerator</FooterLink>
-                            <FooterLink to="/">Amazon Global Selling</FooterLink>
+                            <FooterLink to="/">Sell on EazyPay</FooterLink>
+                            <FooterLink to="/">Sell under EazyPay Accelerator</FooterLink>
+                            <FooterLink to="/">EazyPay Global Selling</FooterLink>
                             <FooterLink to="/">Become an Affiliate</FooterLink>
-                            <FooterLink to="/">Fulfilment by Amazon</FooterLink>
+                            <FooterLink to="/">Fulfilment by EazyPay</FooterLink>
                             <FooterLink to="/">Advertise Your Products</FooterLink>
-                            <FooterLink to="/">Amazon Pay on Merchants</FooterLink>
+                            <FooterLink to="/">EazyPay on Merchants</FooterLink>
                     </FooterLinkItems>
                     <FooterLinkItems>
                         <FooterLinkTitle>Let Us Help You</FooterLinkTitle>
-                            <FooterLink to="/">COVID-19 and Amazon</FooterLink>
+                            <FooterLink to="/">COVID-19 and EazyPay</FooterLink>
                             <FooterLink to="/">Your Account</FooterLink>
                             <FooterLink to="/">Returns Centre</FooterLink>
                             <FooterLink to="/">100% Purchase Protection</FooterLink>
-                            <FooterLink to="/">Amazon App Download</FooterLink>
-                            <FooterLink to="/">Amazon Assistant Download</FooterLink>
+                            <FooterLink to="/">EazyPay App Download</FooterLink>
+                            <FooterLink to="/ChatSupport">EazyPay Customer Support</FooterLink>
                             <FooterLink to="/Help">Help</FooterLink>
                     </FooterLinkItems>
                 </FooterLinksWrapper>

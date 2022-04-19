@@ -33,17 +33,9 @@ export const Right = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 80%;
+  width: 100%;
   margin-left: -400px;
-  margin-top: 250px;
-`;
-
-export const FormLabelWrap = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 5px;
-  border-bottom: 2px solid gray;
+  margin-top: 430px;
 `;
 
 export const Form = styled.form`
@@ -57,7 +49,7 @@ export const Form = styled.form`
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
   margin-left: -180px;
-  margin-top: 170px;
+  margin-top: 20px;
 `;
 
 export const FormH1 = styled.h1`
@@ -69,22 +61,62 @@ export const FormH1 = styled.h1`
 `;
 
 export const FormLabel = styled.label`
-  margin: 15px 0;
+  margin-bottom: 5px;
   font-size: 17px;
   color: #fff;
 `;
 
-export const FormLabel1 = styled.label`
-  margin: 5px 0;
-  font-size: 18px;
-  color: #fff;
-`;
-
 export const FormInput = styled.input`
-  padding: 16px 16px;
+  padding: 18px 16px;
+  margin-top: -2px;
   margin-bottom: 10px;
   border-none;
   border-radius: 4px;
+  font-size: 17px;
+`;
+
+export const DonorFormInput = styled.input`
+  padding: 18px 16px;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  border-none;
+  border-radius: 4px;
+  width: 310px;
+`;
+
+export const CaptchaFormInput = styled.input`
+  padding: 18px 16px;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  border-none;
+  border-radius: 4px;
+  width: 121px;
+  text-align: center;
+`;
+
+export const RadioDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+`;
+
+export const DonorDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  color: white;
+`;
+
+export const FormInputRadio = styled.input`
+  width: 15px;
+  height: 15px;
+  margin: 5px 10px;
+`;
+
+export const FormLabelRadio = styled.label`
+  margin-right: 30px;
+  font-size: 17px;
+  color: #fff;
 `;
 
 export const FormButton = styled.button`
@@ -107,14 +139,20 @@ export const TextLink = styled(LinkR)`
   }
 `;
 
-export const Balance = styled.span`
-  margin: 5px 0;
-  font-size: 18px;
-  color: #06aa95;
+export const FormText = styled.span`
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
 `;
 
-export const Add = styled.span`
-  margin: 5px 0;
-  font-size: 18px;
-  color: #06aa95;
+export const Text = styled.span`
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  margin: 0 10px;
+`;
+
+export const Select = styled.div`
+  width: 120px;
+  margin-right: 10px;
 `;

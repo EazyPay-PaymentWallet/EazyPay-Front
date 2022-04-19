@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import AnimatedShapes from "../components/AnimatedShapes";
 
-import Addmoney from '../components/AddMoney';
+import Additionalsection from '../components/AdditionalSection';
 
 const Container = styled.div`
   height: 100vh;
@@ -10,25 +10,25 @@ const Container = styled.div`
   position: relative;
 `;
 
-const RechargeShape = styled.div`
+const AdditionalSectionShape = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: polygon(0 0, 15% 0, 30% 100%, 0% 100%);
+  clip-path: polygon(0 0, 20% 0, 40% 100%, 0% 100%);
   background-color: crimson;
   z-index: -1;
 `;
 
-const AddMoney = () => {
+const AdditionalSection = () => {
   return (
     <Container>
-      <RechargeShape />
-      <Addmoney />
+      <AdditionalSectionShape />
+      <Additionalsection />
       <AnimatedShapes />
     </Container>
   )
 }
 
-export default AddMoney;
+export default AdditionalSection;

@@ -22,6 +22,13 @@ import Help from './pages/help'
 import Foodreward from './pages/foodrewards.js'
 import Shoppingreward from './pages/shoppingrewards.js'
 import Travelreward from './pages/travelrewards.js'
+import Paymentmethod from './pages/paymentmethod.js'
+import Ministatement from './pages/ministatement.js'
+import Dialogbox from './pages/dialogbox.js'
+import EReciept from './pages/ereciept.js'
+import Chat from './pages/chat.js'
+import Donateorganization from './pages/donate.js'
+import Donate from './pages/donateform.js'
 
 function App() {
   return (
@@ -46,6 +53,13 @@ function App() {
         <Route path="/FoodOrders" element={<Foodreward />} />
         <Route path="/Shopping" element={<Shoppingreward />} />
         <Route path="/Travel" element={<Travelreward />} />
+        <Route path="/PaymentMethod" element={<Paymentmethod />} />
+        <Route path="/MiniStatement" element={<Ministatement />} />
+        <Route path="/DialogBox" element={<Dialogbox />} />
+        <Route path="/E-Reciept" element={<EReciept />} />
+        <Route path="/ChatSupport" element={<Chat />} />
+        <Route path="/DonateOrganization" element={<Donateorganization />} />
+        <Route path="/Donate" element={<Donate />} />
       </Routes>
     </Router>
   );

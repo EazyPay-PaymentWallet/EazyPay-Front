@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormInput, FormButton, Image, FormText, FormLabelWrap } from './AddMoneyElements.js'
+import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormLabel1, Balance, Add, FormInput, FormButton, Image, MoneyWrapper, FormLabelWrap, MoneyButton } from './AddMoneyElements.js'
 import img1 from '../../Images/21.png'
 
 
@@ -15,17 +15,11 @@ const Addmoney = () => {
                 <Form action="#">
                     <FormH1>EazyPay balance</FormH1>
                     <FormLabelWrap>
-                        <FormLabel htmlFor='for'>Current Balance: 1300</FormLabel>
-                        <FormLabel htmlFor='for'>You can add upto ₹ 8700.0</FormLabel>
+                        <FormLabel1 htmlFor='for'>Current Balance: <Balance>1300</Balance></FormLabel1>
+                        <FormLabel1 htmlFor='for'>You can add upto <Add>₹ 8700.0</Add></FormLabel1>
                     </FormLabelWrap>
-                    <FormLabel htmlFor='for'>Recharge Amount</FormLabel>
-                    <select class="form-select form-select-lg">
-                        <option>Choose amount</option>
-                        <option>₹ 500</option>
-                        <option>₹ 1000</option>
-                        <option>₹ 2000</option>
-                        <option>₹ 3000</option>
-                    </select>
+                    <FormLabel htmlFor='for'>Enter Amount</FormLabel>
+                    <FormInput type='number' placeholder='Amount'></FormInput>
                     <FormButton type='submit'>Add Money to Balance</FormButton>
                 </Form>
             </Right>
