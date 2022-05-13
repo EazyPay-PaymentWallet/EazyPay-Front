@@ -36,10 +36,10 @@ const Text = styled.span`
   text-align: center;
 `;
 
-const MiniCard = ({ to, image, text}) => {
+const MiniCard = ({ to, image, text, props}) => {
   const navigate = useNavigate();
   return (
-    <Container onClick={() => navigate(to)}>
+    <Container onClick={() => navigate(to, {state: props})}>
         <Image src={image}/>
         <Text>
             {text}

@@ -4,7 +4,8 @@ import MiniCard from './MiniCard';
 import imag1 from '../../Images/icon1.jpg';
 import imag2 from '../../Images/icon2.jpg';
 
-const Feature = () => {
+const Feature = (props) => {
+  console.log(props)
   return (
     <Container id='intro'>
       <Left>
@@ -29,7 +30,7 @@ const Feature = () => {
         </Title>
         <SubTitle>Get access to our exclusive app that allows you to send unlimited transactions without getting charged any fees.</SubTitle>
         <CardContainer>
-          <MiniCard to='/PayNumber' image={imag1} text='Pay Number'/>
+          <MiniCard to='/PayNumber' image={imag1} text='Pay Number' props = {props}/>
           <MiniCard to='/BankTransfer' image={imag2} text='Bank Transfer'/>
           <MiniCard to='/PayUPI' image={imag1} text='Pay UPI id'/>
         </CardContainer>

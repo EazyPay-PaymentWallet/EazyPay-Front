@@ -31,7 +31,7 @@ export const Right = styled.div`
 export const Image = styled.img`
   width: 170%;
   margin-left: -197px;
-  margin-top: 142px;
+  margin-top: 191px;
 `;
 
 export const Wrapper = styled.div`
@@ -59,7 +59,7 @@ export const EPWrapper = styled.div`
 `;
 
 export const EPLeft = styled.div`
-  width: 50%;
+  width: 40%;
 `;
 
 export const EPRight = styled.div`
@@ -102,24 +102,42 @@ export const SPHeader1 = styled.span`
 export const SPCard = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-right: 28px;
+  margin-bottom: 10px;
 `;
 
 export const SPText = styled.span`
+  margin-right: 40px;
+`;
+
+export const SPText1 = styled.span`
+  width: 70%;
+`;
+
+export const SPText2 = styled.span`
+  width: 15%;
+  text-align: center;
+`;
+
+export const SPText3 = styled.span`
+  width: 15%;
+  text-align: center;
 `;
 
 export const OtherPay = styled.div`
-  padding: 10px;
+  padding: 0 10px;
 `;
 
 export const OPWrapper = styled.div`
   border-top: 2px solid lightgray;
   padding-top: 5px;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const OPWrapper1 = styled.div`
   padding-top: 10px;
+  display: flex;
+  flex-direction: row;
 `;
 
 export const OPTitle = styled.span`
@@ -128,6 +146,7 @@ export const OPTitle = styled.span`
 `;
 
 export const OPText = styled.p`
+  margin-top: 15px;
 `;
 
 export const OPAddCard = styled.p`
@@ -198,9 +217,30 @@ export const PaymentText = styled.span`
 `;
 
 export const FormInputRadio = styled.input`
-  width: 15px;
-  height: 15px;
-  margin: 5px 10px;
+  width: 12px;
+  height: 12px;
+  margin: 5px 20px;
+`;
+
+export const FormInputRadio1 = styled.input`
+  width: 20px;
+  height: 20px;
+  margin: 5px 20px;
+`;
+
+export const FormLabelRadio = styled.label`
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 17px;
+  color: #000;
+`;
+
+export const FormLabelRadio1 = styled.label`
+  margin-right: 10px;
+  font-size: 17px;
+  color: #000;
 `;
 
 

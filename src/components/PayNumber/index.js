@@ -1,10 +1,12 @@
 import React from 'react'
 import { Container, Right, Left, Icon, Form, FormH1, FormLabel, FormInput, FormButton, Image, FormText, select } from './PayNumberElements.js'
 import img1 from '../../Images/21.png'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Paynumber = () => {
     const navigate = useNavigate()
+    const location = useLocation();
+    console.log(location.state)
     return (
         <>
             <Container>

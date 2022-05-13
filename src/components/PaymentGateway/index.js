@@ -4,7 +4,7 @@ import visa from '../../Images/visa.png'
 import mc from '../../Images/mc.gif'
 import reciept from '../../pages/ereciept'
 import { useNavigate } from 'react-router-dom';
-import { Container, Right, Left, Icon, Image, RightContainer, Wrapper, Title, EPTitle, EPLeft, EPRight, EazyPay, EPText, EPWrapper, SPTitle, SPCard, SavedPay, SPWrapper, SPHeader, SPHeader1, SPText, OPTitle, OtherPay, OPWrapper,OPWrapper1, OPText, OPAddCard, OPDesc, OPImage, RightPayment, OrderDetails, OrderText, OrderPrice, OrderTotal, TotalPrice, PaymentButton, PaymentText, Total, FormInputRadio } from './PaymentGatewayElements.js'
+import { Container, Right, Left, Icon, Image, RightContainer, Wrapper, Title, EPTitle, EPLeft, EPRight, EazyPay, EPText, EPWrapper, SPTitle, SPCard, SavedPay, SPWrapper, SPHeader, SPHeader1, SPText, SPText1, SPText2, SPText3, OPTitle, OtherPay, OPWrapper, OPWrapper1, OPText, OPAddCard, OPDesc, OPImage, RightPayment, OrderDetails, OrderText, OrderPrice, OrderTotal, TotalPrice, PaymentButton, PaymentText, Total, FormLabelRadio, FormLabelRadio1, FormInputRadio, FormInputRadio1 } from './PaymentGatewayElements.js'
 
 const Paymentgateway = () => {
   const navigate = useNavigate()
@@ -22,13 +22,16 @@ const Paymentgateway = () => {
                   <EazyPay>
                     <EPTitle>Your available balance</EPTitle>
                     <EPWrapper>
-                    <EPLeft>
-                      Use your ₹ 385.00 Eazy Pay balance
-                    </EPLeft>
-                    <EPRight>
-                      <EPText>1. For optimal utilization of your Eazy Pay balance, balance expiring the earliest will be redeemed first.</EPText><br/>
-                      <EPText>2. Your Eazy Pay balance cannot be used along with Cash on Delivery or the EMI payment modes.</EPText>
-                    </EPRight>
+                      <FormInputRadio1 type="radio" />
+                      <FormLabelRadio>
+                        <EPLeft>
+                          Use your ₹ 385.00 Eazy Pay balance
+                        </EPLeft>
+                        <EPRight>
+                          <EPText>1. For optimal utilization of your EazyPay balance, balance expiring the earliest will be redeemed first.</EPText><br/>
+                          <EPText>2. Your EazyPay balance cannot be used along with Cash on Delivery or the EMI payment modes.</EPText>
+                        </EPRight>
+                      </FormLabelRadio>
                     </EPWrapper>
                   </EazyPay>
                 </Wrapper>
@@ -41,15 +44,19 @@ const Paymentgateway = () => {
                     </SPHeader>
                     <SPWrapper>
                       <SPCard>
-                        <SPText><b>State Bank of India Debit Card</b> ending in 5489</SPText>
-                        <SPText>DAYANANTHAVEL</SPText>
-                        <SPText>11/2023</SPText>
+                        <FormInputRadio type="radio" />
+                        <FormLabelRadio>
+                          <SPText1><b>State Bank of India Debit Card</b> ending in 5489</SPText1>
+                          <SPText2>DAYAN</SPText2>
+                          <SPText3>11/2023</SPText3>
+                        </FormLabelRadio>
                       </SPCard>
                       <SPCard>
-                        <FormInputRadio type="radio" value="Yes" /><FormLabelRadio>
-                          <SPText><b>Canara Bank Debit Card</b> ending in 2244</SPText>
-                          <SPText>ARJUN</SPText>
-                          <SPText>11/2023</SPText>
+                        <FormInputRadio type="radio" />
+                        <FormLabelRadio>
+                          <SPText1><b>Canara Bank Debit Card</b> ending in 2244</SPText1>
+                          <SPText2>ARJUN</SPText2>
+                          <SPText3>11/2023</SPText3>
                         </FormLabelRadio>
                       </SPCard>
                     </SPWrapper>
@@ -59,40 +66,52 @@ const Paymentgateway = () => {
                   <OtherPay>
                     <OPTitle>Another payment method</OPTitle>
                     <OPWrapper>
-                      <OPAddCard>Add Debit/Credit/ATM Card</OPAddCard>
-                      <OPDesc>You can save your cards as per new RBI guidelines. Learn More</OPDesc>
-                      <OPImage src={visa} />
-                      <OPImage src={mc} />
+                      <FormInputRadio type="radio" />
+                        <FormLabelRadio1>
+                          <OPAddCard>Add Debit/Credit/ATM Card</OPAddCard>
+                          <OPDesc>You can save your cards as per new RBI guidelines. Learn More</OPDesc>
+                          <OPImage src={visa} />
+                          <OPImage src={mc} />
+                        </FormLabelRadio1>
                     </OPWrapper>
                     <OPWrapper1>
-                      <OPAddCard>Net Banking</OPAddCard>
-                      <select>
-                        <option>Choose an option</option>
-                        <option>₹ 239</option>
-                        <option>₹ 209</option>
-                        <option>₹ 666</option>
-                        <option>₹ 179</option>
-                        <option>₹ 149</option>
-                        <option>₹ 199</option>
-                        <option>₹ 499</option>
-                        <option>₹ 799</option>
-                        <option>₹ 2999</option>
-                        <option>₹ 719</option>
-                        <option>₹ 119</option>
-                        <option>₹ 299</option>
-                        <option>₹ 91</option>
-                        <option>₹ 479</option>
-                        <option>₹ 75</option>
-                        <option>₹ 181</option>
-                      </select>
-                      <OPText>For faster payment and instant refund, please use UPI Why?</OPText>
+                      <FormInputRadio type="radio" />
+                      <FormLabelRadio1>
+                        <OPAddCard>Net Banking</OPAddCard>
+                        <select>
+                          <option>Choose an option</option>
+                          <option>₹ 239</option>
+                          <option>₹ 209</option>
+                          <option>₹ 666</option>
+                          <option>₹ 179</option>
+                          <option>₹ 149</option>
+                          <option>₹ 199</option>
+                          <option>₹ 499</option>
+                          <option>₹ 799</option>
+                          <option>₹ 2999</option>
+                          <option>₹ 719</option>
+                          <option>₹ 119</option>
+                          <option>₹ 299</option>
+                          <option>₹ 91</option>
+                          <option>₹ 479</option>
+                          <option>₹ 75</option>
+                          <option>₹ 181</option>
+                        </select>
+                        <OPText>For faster payment and instant refund, please use UPI Why?</OPText>
+                      </FormLabelRadio1>
                     </OPWrapper1>
                     <OPWrapper1>
-                      <OPAddCard>Other UPI Apps</OPAddCard>
+                      <FormInputRadio type="radio" />
+                      <FormLabelRadio1>
+                        <OPAddCard>Other UPI Apps</OPAddCard>
+                      </FormLabelRadio1>
                     </OPWrapper1>
                     <OPWrapper1>
-                      <OPAddCard>Pay on Delivery</OPAddCard>
-                      <OPText>Due to high demand and to ensure social distancing, Pay on Delivery is not available.</OPText>
+                      <FormInputRadio type="radio" />
+                      <FormLabelRadio1>
+                        <OPAddCard>Pay on Delivery</OPAddCard>
+                        <OPText>Due to high demand and to ensure social distancing, Pay on Delivery is not available.</OPText>
+                      </FormLabelRadio1>
                     </OPWrapper1>
                   </OtherPay>
                 </Wrapper>

@@ -28,9 +28,9 @@ const SignIn = () => {
                 email: email,
                 password: password
             }).then((response) => {
-                console.log('response');
                 if(!response.data.error) {
-                    navigate('/')
+                    console.log(response.data)
+                    navigate('/',{state:{phone:response.data.phone,fullname:response.data.name}})
                 }
 
                 if (response.data.error) {
@@ -43,7 +43,7 @@ const SignIn = () => {
   return (
     <>
         <Container>
-            <Icon to="/">EazyPay</Icon>
+            <Icon to="/">EazyPay</Icon> 
             <Left>
                 <Image src={img1} />
             </Left>

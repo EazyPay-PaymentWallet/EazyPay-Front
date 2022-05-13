@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {useLocation} from 'react-router-dom'
 
 import Navbar from "../components/Navbar";
 import Intro from "../components/IntroSection";
@@ -96,6 +97,8 @@ const AdditionalShape = styled.div`
 `;
 
 function App() {
+  const location = useLocation();
+  console.log(location.state)
   return (
     <>
       <Container>
@@ -105,7 +108,7 @@ function App() {
         <AnimatedShapes />
       </Container>
       <Container>
-        <Feature />
+        <Feature props={location.state}/>
         <FeatureShape />
         <AnimatedShapes />
       </Container>
