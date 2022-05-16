@@ -34,7 +34,7 @@ export const Right = styled.div`
 export const Image = styled.img`
   width: 130%;
   margin-left: -200px;
-  margin-top: 250px;
+  margin-top: 530px;
 `;
 
 export const CardContainer = styled.div`

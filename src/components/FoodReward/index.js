@@ -5,6 +5,7 @@ import img1 from '../../Images/21.png'
 import image1 from '../../Images/food1.jpg';
 import image2 from '../../Images/food4.jpg';
 import image3 from '../../Images/food3.jpg';
+import image5 from '../../Images/food5.jpg';
 
 
 const Foodreward = () => {
@@ -23,6 +24,10 @@ const Foodreward = () => {
                 <FoodCard image={image1} type="WIN UP TO ₹500 BACK" brand = "Dominos" desc="Min order: ₹499" valid="Valid till 31 Mar"/>
                 <FoodCard image={image2} type="WIN UP TO ₹500 BACK" brand = "PopEyes" desc="Min order: ₹499" valid="Valid till 31 Mar"/>
                 <FoodCard image={image3} type="WIN UP TO ₹500 BACK" brand = "Licious" desc="Min order: ₹600" valid="Valid till 31 Mar"/>
+              </CardContainer>
+              <CardContainer>
+                <FoodCard image={image5} type="GET FLAT 30% BACK" brand = "Swiggy" desc="Min order: ₹499" valid="Valid till 31 May"/>
+                <FoodCard image={image5} type="GET FLAT 30% BACK" brand = "Swiggy" desc="Min order: ₹499" valid="Valid till 31 May"/>
               </CardContainer>
             </Right>
         </Container>

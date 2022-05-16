@@ -2,15 +2,15 @@ import React from 'react'
 import styled from "styled-components";
 import AnimatedShapes from "../components/AnimatedShapes";
 
-import Shoppingreward from '../components/ShoppingReward';
+import Postpaidrecharge from '../components/PostpaidRecharge';
 
 const Container = styled.div`
-  height: 120vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
 `;
 
-const ShoppingRewardShape = styled.div`
+const PostpaidRechargeShape = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -21,14 +21,14 @@ const ShoppingRewardShape = styled.div`
   z-index: -1;
 `;
 
-const ShoppingReward = () => {
+const PostpaidRecharge = () => {
   return (
     <Container>
-      <ShoppingRewardShape />
-      <Shoppingreward />
+      <PostpaidRechargeShape />
+      <Postpaidrecharge />
       <AnimatedShapes />
     </Container>
   )
 }
 
-export default ShoppingReward;
+export default PostpaidRecharge;

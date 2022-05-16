@@ -13,7 +13,7 @@ const Broadbandbill = () => {
             </Left>
             <Right>
                 <Form action="#">
-                    <FormH1>LANDLINE/BROADBAND BILL</FormH1>
+                    <FormH1>Broadband/LandLine Bill</FormH1>
                     <FormLabel htmlFor='for'>Operator</FormLabel>
                     <select class="form-select form-select-lg">
                         <option>Select operator to proceed</option>

@@ -29,6 +29,11 @@ import EReciept from './pages/ereciept.js'
 import Chat from './pages/chat.js'
 import Donateorganization from './pages/donate.js'
 import Donate from './pages/donateform.js'
+import Waterbill from './pages/waterbill'
+import Postpaidrecharge from './pages/postpaidrecharge'
+import Gasbill from './pages/gasbill'
+import Entertainmentreward from './pages/entertainmentreward'
+import Healthreward from './pages/healthreward'
 
 function App() {
   return (
@@ -60,6 +65,11 @@ function App() {
         <Route path="/ChatSupport" element={<Chat />} />
         <Route path="/DonateOrganization" element={<Donateorganization />} />
         <Route path="/Donate" element={<Donate />} />
+        <Route path="/Water" element={<Waterbill />} />
+        <Route path="/PostpaidMobile" element={<Postpaidrecharge />} />
+        <Route path="/GasBooking" element={<Gasbill />} />
+        <Route path="/Entertainment" element={<Entertainmentreward />} />
+        <Route path="/Health&Fitness" element={<Healthreward />} />
       </Routes>
     </Router>
   );

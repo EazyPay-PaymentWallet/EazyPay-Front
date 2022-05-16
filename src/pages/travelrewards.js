@@ -5,7 +5,7 @@ import AnimatedShapes from "../components/AnimatedShapes";
 import Travelreward from '../components/TravelReward';
 
 const Container = styled.div`
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
   position: relative;
 `;

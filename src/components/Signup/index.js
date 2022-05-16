@@ -42,7 +42,7 @@ const Signup = () => {
             }).then((response) => {
                 console.log('response');
                 if(!response.data.error) {
-                    navigate('/')
+                    navigate('/Login')
                 }
 
                 if (response.data.error) {

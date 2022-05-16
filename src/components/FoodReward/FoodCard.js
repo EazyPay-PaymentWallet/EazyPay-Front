@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   height: 340px;
+  width: 260px;
   margin-right: 10px;
   -webkit-box-shadow: 0px 0px 17px -11px rgba(0, 0, 0 , 0.58);
   box-shadow: 0px 0px 20px -11px rgba(0, 0, 0, 0.98);
